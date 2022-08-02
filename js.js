@@ -1,11 +1,13 @@
-function calculateTotal(number) {
+function findLongestWord(string) {
   // Change code below this line
-  let sum = 0;
-  for (let i = 1; i <= number; i += 1) {
-    // Change this line
-    sum += i;
+  let words = string.split(" ");
+  let longword = words[0];
+  for (const word of words) {
+    if (word.length > longword.length) {
+      longword = word;
+    }
+    // Change code above this line
   }
-  return sum;
-  // Change code above this line
+  return longword;
 }
-console.log(calculateTotal(3));
+console.log(findLongestWord("May the force be with you"));

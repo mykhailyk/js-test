@@ -1,13 +1,15 @@
-function findLongestWord(string) {
+function filterArray(numbers, value) {
   // Change code below this line
-  let words = string.split(" ");
-  let longword = words[0];
-  for (const word of words) {
-    if (word.length > longword.length) {
-      longword = word;
-    }
-    // Change code above this line
+  numbers.sort(function (a, b) {
+    return a - b;
+  });
+  const num = [];
+  let end = numbers[numbers.length - 1];
+  for (let i = value + 1; i <= end; i += 1) {
+    num.push(i);
   }
-  return longword;
+  return num;
+  // Change code above this line
 }
-console.log(findLongestWord("May the force be with you"));
+
+console.log(filterArray([12, 24, 8, 41, 76], 38));

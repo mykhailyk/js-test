@@ -1,16 +1,12 @@
-function filterArray(numbers, value) {
+function getEvenNumbers(start, end) {
   // Change code below this line
-  const filteredNumbers = [];
-
-  // for (let i = 0; i < numbers.length; i += 1) {
-  //   const number = numbers[i];
-  for (let number of numbers) {
-    if (number > value) {
-      filteredNumbers.push(number);
+  const numbers = [];
+  for (let i = start; i <= end; i += 1) {
+    if (i % 2 === 0) {
+      numbers.push(i);
     }
   }
-
-  return filteredNumbers;
+  return numbers;
   // Change code above this line
 }
-console.log(filterArray([12, 24, 8, 41, 76], 20));
+console.log(getEvenNumbers(3, 11));

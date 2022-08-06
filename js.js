@@ -1,12 +1,8 @@
-function getEvenNumbers(start, end) {
-  // Change code below this line
-  const numbers = [];
-  for (let i = start; i <= end; i += 1) {
-    if (i % 2 === 0) {
-      numbers.push(i);
-    }
-  }
-  return numbers;
-  // Change code above this line
-}
-console.log(getEvenNumbers(3, 11));
+const salary = prompt("введіть Вашу заробітну платню:");
+let addSalary = salary * 1.15; //додаткові 15% премія
+alert(`зарплата з премією = ${addSalary}`);
+let vat = addSalary * 0.9; //податок 10%
+alert(`зарплата з вирахуванням податків  = ${vat}`);
+let spend = vat - 190; // витрати в маг
+alert(`залишилося на дружину  = ${spend / 2}`);
+alert(`залишилося на чоловіка  = ${spend / 2}`);

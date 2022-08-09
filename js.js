@@ -1,34 +1,29 @@
-let count = 0;
+const products = [
+  { name: "Radar", price: 1300, quantity: 4 },
+  { name: "Scanner", price: 2700, quantity: 3 },
+  { name: "Droid", price: 400, quantity: 7 },
+  { name: "Grip", price: 1200, quantity: 9 },
+];
 
-function cc(card) {
-  // Змініть код лише під цим рядком
-  switch (card) {
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-    case 6:
-      count++;
-      break;
-
-    case 10:
-    case "J":
-    case "Q":
-    case "K":
-    case "A":
-      count--;
-      break;
-  }
-  console.log(count);
-  let holdbet = "Hold";
-  if (count > 0) {
-    holdbet = "Bet";
+function getAllPropValues(propName) {
+  // Change code below this line
+  const mass = [];
+  const product = Object.keys(products);
+  for (let prod of product) {
+    console.log(products[prod].name);
+    console.log(propName);
+    if (products[prod].name === propName) {
+      mass.push(apartment[key]);
+    }
+    // console.log(products[prod].propName);
   }
 
-  return count + " " + holdbet;
-  // Змініть код лише над цим рядком
+  // Change code above this line
 }
-console.log(cc(2, 3, 4, 5, 6));
-console.log(cc(10, J, Q, K, A));
-console.log(cc(3, 2, A, 10, K));
-console.log(cc(7, 8, 9));
+
+console.log(getAllPropValues("name"));
+console.log(getAllPropValues("quantity"));
+
+// for (const key of keys) {
+//   // keys.push(key);
+//   values.push(apartment[key].name);

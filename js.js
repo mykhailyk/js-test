@@ -1,4 +1,4 @@
-// Перебери об'єкт apartment, використовуючи цикл for...in,
+// 13_____ Перебери об'єкт apartment, використовуючи цикл for...in,
 // і запиши в масив keys всі його ключі, а в масив values
 // всі значення його властивостей.
 // const apartment = {
@@ -17,7 +17,26 @@
 // console.log(keys);
 // console.log(values);
 
-// Напиши функцію calculateTotalPrice(productName),
+// 16______Напиши функцію countTotalSalary(salaries), яка приймає
+// об'єкт зарплат, де ім'я властивості - це ім'я співробітника,
+// а значення властивості - це зарплата.Функція повинна розраху
+// вати загальну суму зарплат співробітників і повернути її.
+// Використовуй змінну totalSalary для зберігання загальної
+// суми зарплати.
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+//   // Change code below this line
+//   const keys = Object.values(salaries);
+//   for (const key of keys) {
+//     totalSalary += key;
+//   }
+
+//   // Change code above this line
+//   return totalSalary;
+// }
+// console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));
+
+//20_____ Напиши функцію calculateTotalPrice(productName),
 //   яка приймає один параметр productName - назва товару.
 //  Функція повинна повернути загальну
 // вартість(ціна * кількість) товару з таким ім'ям з
@@ -31,12 +50,11 @@ const products = [
 
 function calculateTotalPrice(productName) {
   // Change code below this line
-  const total = 0;
-
-  for (const key of products) {
-    console.log(key[productName]);
-    if (key[productName]) {
-      total = products.price * products.quantity;
+  let total = 0;
+  const product = Object.keys(products);
+  for (let prod of product) {
+    if (productName === products[prod].name) {
+      total = products[prod].price * products[prod].quantity;
     }
   }
   return total;

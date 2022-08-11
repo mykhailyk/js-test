@@ -118,20 +118,34 @@
 //     icon: tomorrowIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
 //   },
 // } = forecast;
+// Change code below this line
 
-function lovefunc(flower1, flower2) {
-  // moment of truth
-  // const biggerNumber = num1 > num2 ? num1 : num2;
-  const fl = (flower1 + flower2) % 2 === 0 ? false : true;
-  return fl;
+// 31___________Використовуючи операцію rest,
+//доповни код функції add() таким чином,
+//щоб вона приймала будь - яку кількість аргументів,
+//рахувала і повертала їх суму.
+// function add(...args) {
+//   let total = 0;
+//   for (let i = 0; i < args.length; i += 1) {
+//     total += args[i];
+//   }
+//   return total;
+//   // Change code above this line
+// }
+// console.log(add(12, 4, 11, 48));
+
+// 32_________Функція addOverNum() рахує суму всіх аргументів.
+//Зміни параметри і тіло функції addOverNum() таким чином,
+//щоб вона рахувала суму тільки тих аргументів, які більші
+//за задане число.Це число повинно бути першим параметром функції.
+// Change code below this line
+function addOverNum(...args) {
+  let total = 0;
+
+  for (const arg of args) {
+    total += arg;
+  }
+
+  return total;
+  // Change code above this line
 }
-
-//     assert.strictEqual(lovefunc(1, 4), true);
-//     assert.strictEqual(lovefunc(2, 2), false);
-//     assert.strictEqual(lovefunc(0, 1), true);
-// assert.strictEqual(lovefunc(0, 0), false);
-
-console.log(lovefunc(1, 4));
-console.log(lovefunc(2, 2));
-console.log(lovefunc(0, 1));
-console.log(lovefunc(0, 0));

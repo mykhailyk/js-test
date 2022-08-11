@@ -139,13 +139,36 @@
 //щоб вона рахувала суму тільки тих аргументів, які більші
 //за задане число.Це число повинно бути першим параметром функції.
 // Change code below this line
-function addOverNum(...args) {
-  let total = 0;
+// function addOverNum(...args) {
+//   let total = 0;
+//   let first = args.shift();
+//   for (const arg of args) {
+//     if (first < arg) {
+//       total += arg;
+//     }
+//   }
+//   return total;
+//   // Change code above this line
+// }
+// console.log(addOverNum(15, 32, 6, 13, 19, 8)); //93 -51
 
-  for (const arg of args) {
-    total += arg;
+//33__________Функція findMatches() приймає довільну кількість аргументів.
+//Першим аргументом завжди буде масив чисел, а решта аргументів
+//будуть просто числами.
+//Доповни код функції таким чином, щоб вона повертала новий масив matches,
+//в якому будуть тільки ті аргументи, починаючи з другого, які є в масиві
+//першого аргументу.
+// Change code below this line
+function findMatches(...args) {
+  const matches = []; // Don't change this line
+  let array1 = args.shift();
+
+  for (let i = 0; i < array1.length; i += 1) {
+    if (args.includes(array1[i])) matches.push(array1[i]);
+    // Change code above this li  ne
   }
 
-  return total;
-  // Change code above this line
+  return matches;
 }
+console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
+console.log(findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41));

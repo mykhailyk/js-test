@@ -159,16 +159,44 @@
 //в якому будуть тільки ті аргументи, починаючи з другого, які є в масиві
 //першого аргументу.
 // Change code below this line
-function findMatches(...args) {
-  const matches = []; // Don't change this line
-  let array1 = args.shift();
+// function findMatches(...args) {
+//   const matches = []; // Don't change this line
+//   let array1 = args.shift();
 
-  for (let i = 0; i < array1.length; i += 1) {
-    if (args.includes(array1[i])) matches.push(array1[i]);
-    // Change code above this li  ne
-  }
+//   for (let i = 0; i < array1.length; i += 1) {
+//     if (args.includes(array1[i])) matches.push(array1[i]);
+//     // Change code above this li  ne
+//   }
+//   return matches;
+// }
+// console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
+// console.log(findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41));
 
-  return matches;
-}
-console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
-console.log(findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41));
+// 35________ Доповни метод updateBook(oldName, newName) таким чином,
+//   щоб він змінював назву книги з oldName на newName у властивості
+// books. Використовуй indexOf() для того, щоб знайти потрібний
+// елемент масиву, і splice() для того, щоб замінити цей елемент
+// const bookShelf = {
+//   books: ["The last kingdom", "Haze", "The guardian of dreams"],
+//   updateBook(oldName, newName) {
+//     const bookIndex = this.books.indexOf(oldName);
+//     console.log(this.books.splice(bookIndex, 1));
+//     this.books.splice(bookIndex, 0, newName);
+//   },
+// };
+// console.log(bookShelf.updateBook("The last kingdom", "Dune"));
+// console.log(bookShelf);
+
+// 40_____
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   updatePotionName(oldName, newName) {
+//     // Change code below this line
+//     const potionsIndex = this.potions.indexOf(oldName);
+//     // console.log(this.potions.splice(potionsIndex, 0));
+//     this.potions.splice(potionsIndex, 1, newName);
+//     console.log(this.potions);
+//     // Change code above this line
+//   },
+// };
+// console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"));

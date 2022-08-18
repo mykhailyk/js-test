@@ -272,15 +272,27 @@
 // console.log(filterArray([1, 2, 3, 4, 10], 3));
 
 // 7_______4
-function getCommonElements(firstArray, secondArray) {
-  const commonElements = [];
-  // Change code below this line
-  firstArray.forEach(function (array, index) {
-    if (secondArray.includes(firstArray[index])) {
-      commonElements.push(firstArray[index]);
-    }
+// function getCommonElements(firstArray, secondArray) {
+//   const commonElements = [];
+//   // Change code below this line
+//   firstArray.forEach(function (array, index) {
+//     if (secondArray.includes(firstArray[index])) {
+//       commonElements.push(firstArray[index]);
+//     }
+//   });
+//   return commonElements;
+//   // Change code above this line
+// }
+// console.log(getCommonElements([1, 2, 3], [2, 4]));
+
+// 10_____4
+// Change code below this line
+const calculateTotalPrice = (orderedItems) => {
+  let totalPrice = 0;
+  orderedItems.forEach((item) => {
+    totalPrice += item;
   });
-  return commonElements;
-  // Change code above this line
-}
-console.log(getCommonElements([1, 2, 3], [2, 4]));
+  return totalPrice;
+};
+// Change code above this line
+console.log(calculateTotalPrice([164, 48, 291]));

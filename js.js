@@ -403,3 +403,12 @@
 //     },
 //   ])
 // );
+
+// 24______4
+// Change code below this line
+const getUsersWithFriend = (users, friendName) => {
+  const allFriend = users.flatMap((user) => user.friends);
+  return (getUsersWithFriend = allFriend.filter(
+    (user, index, array) => array(user) === friendName
+  ));
+};

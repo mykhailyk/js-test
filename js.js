@@ -567,24 +567,79 @@
 // audi.price = 51000;
 // console.log(audi.price); // 49000
 
-class Car {
-  static #MAX_PRICE = 50000;
-  // Change code below this line
-  static checkPrice(price) {
-    if (price > Car.MAX_PRICE) {
-      return "Error! Price exceeds the maximum";
-    } else {
-      return "Success! Price is within acceptable limits";
-    }
+// class Car {
+//   static #MAX_PRICE = 50000;
+//   // Change code below this line
+//   static checkPrice(price) {
+//     if (price > Car.MAX_PRICE) {
+//       return "Error! Price exceeds the maximum";
+//     } else {
+//       return "Success! Price is within acceptable limits";
+//     }
+//   }
+//   // Change code above this line
+//   constructor({ price }) {
+//     this.price = price;
+//   }
+// }
+// const audi = new Car({ price: 36000 });
+// const bmw = new Car({ price: 64000 });
+// console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
+// console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"
+
+// class User {
+//   constructor(email) {
+//     this.email = email;
+//   }
+//   get email() {
+//     return this.email;
+//   }
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+// // Change code below this line
+// class Admin extends User {
+//   static AccessLevel() {
+//     BASIC: "basic", SUPERUSER: "superuser"
+//   }
+// }
+
+class User {
+  eamil;
+
+  constructor(email) {
+    this.email = email;
   }
-  // Change code above this line
-  constructor({ price }) {
-    this.price = price;
+
+  get email() {
+    return this.email;
+  }
+
+  set email(newEmail) {
+    this.email = newEmail;
   }
 }
 
-const audi = new Car({ price: 36000 });
-const bmw = new Car({ price: 64000 });
+class Admin extends User {
+  // Change code below this line
+  constructor({ email, accessLevel }) {
+    super(email);
+    this.accessLevel = accessLevel;
+  }
 
-console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
-console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"
+  static AccessLevel = {
+    BASIC: "basic",
+    SUPERUSER: "superuser",
+  };
+
+  // Change code above this line
+}
+
+const mango = new Admin({
+  email: "mango@mail.com",
+  accessLevel: Admin.AccessLevel.SUPERUSER,
+});
+
+console.log(mango.email); // "mango@mail.com"
+console.log(mango.accessLevel); // "superuser"

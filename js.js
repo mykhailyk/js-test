@@ -605,41 +605,49 @@
 //   }
 // }
 
-class User {
-  eamil;
+// class User {
+//   eamil;
+//   constructor(email) {
+//     this.email = email;
+//   }
+//   get email() {
+//     return this.email;
+//   }
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+// class Admin extends User {
+//   // Change code below this line
+//   constructor({ email, accessLevel }) {
+//     super(email);
+//     this.accessLevel = accessLevel;
+//   }
+//   static AccessLevel = {
+//     BASIC: "basic",
+//     SUPERUSER: "superuser",
+//   };
+//   // Change code above this line
+// }
+// const mango = new Admin({
+//   email: "mango@mail.com",
+//   accessLevel: Admin.AccessLevel.SUPERUSER,
+// });
+// console.log(mango.email); // "mango@mail.com"
+// console.log(mango.accessLevel); // "superuser"
 
-  constructor(email) {
-    this.email = email;
-  }
-
-  get email() {
-    return this.email;
-  }
-
-  set email(newEmail) {
-    this.email = newEmail;
-  }
-}
-
-class Admin extends User {
-  // Change code below this line
-  constructor({ email, accessLevel }) {
-    super(email);
-    this.accessLevel = accessLevel;
-  }
-
-  static AccessLevel = {
-    BASIC: "basic",
-    SUPERUSER: "superuser",
-  };
-
-  // Change code above this line
-}
-
-const mango = new Admin({
-  email: "mango@mail.com",
-  accessLevel: Admin.AccessLevel.SUPERUSER,
-});
-
-console.log(mango.email); // "mango@mail.com"
-console.log(mango.accessLevel); // "superuser"
+// Create a function with two arguments that will return an
+// array of the first(n) multiples of(x).Assume both the given
+// number and the number of times to count will be positive
+// numbers greater than 0.
+// function countBy(x, n) {
+//   let z = [];
+//   for (let i = x; i <= x * n; i += 1) {
+//     if (i % x === 0) {
+//       z.push(i);
+//     }
+//   }
+//   return z;
+// }
+// console.log(countBy(1, 10)); //[1,2,3,4,5,6,7,8,9,10]
+// console.log(countBy(2, 5)); //[2,4,6,8,10]
